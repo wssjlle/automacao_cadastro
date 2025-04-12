@@ -28,8 +28,6 @@ COORDS = {
 # - Ajuste as coordenadas conforme necessário.
 
 
-
-# Funções
 # Função para abrir o navegador e acessar a URL de login    
 
 def abrir_navegador():
