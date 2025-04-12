@@ -1,13 +1,14 @@
 import pyautogui
 import time
 import pandas as pd
+from pathlib import Path
 
 # Configurações iniciais
 pyautogui.PAUSE = 0.5
 URL_LOGIN = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
 EMAIL = "wssjlle@gmail.com"
 SENHA = "suasenha"
-ARQUIVO_CSV = "data/produtos.csv"
+ARQUIVO_CSV = Path(__file__).resolve().parent.parent / "data" / "produtos.csv"
 
 # Coordenadas (ajustar conforme o seu monitor)
 COORDS = {
