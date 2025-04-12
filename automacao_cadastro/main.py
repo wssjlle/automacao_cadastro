@@ -10,12 +10,27 @@ EMAIL = "wssjlle@gmail.com"
 SENHA = "suasenha"
 ARQUIVO_CSV = Path(__file__).resolve().parent.parent / "data" / "produtos.csv"
 
+
+
 # Coordenadas (ajustar conforme o seu monitor)
 COORDS = {
     "campo_email": (470, 406),
-    "botao_login": (668, 564),
-    "campo_codigo": (653, 294)
+    "botao_login": (528, 375),
+    "campo_codigo": (573, 262)
 }
+
+# Para pegar as coordenadas do mouse e setar aqui nas COORDS, use:
+# print(pyautogui.position())
+# Dicas:    
+# - Mantenha o mouse parado na posição desejada e execute o código.
+# - O código vai exibir as coordenadas do mouse no terminal.
+# - Quando terminar, copie as coordenadas e cole no dicionário COORDS.
+# - Ajuste as coordenadas conforme necessário.
+
+
+
+# Funções
+# Função para abrir o navegador e acessar a URL de login    
 
 def abrir_navegador():
     pyautogui.press("win")
@@ -26,17 +41,21 @@ def abrir_navegador():
     pyautogui.press("enter")
     time.sleep(3)
 
+# Função para fazer login no sistema
 def fazer_login(email, senha):
     pyautogui.click(*COORDS["campo_email"])
     pyautogui.write(email)
     pyautogui.press("tab")
     pyautogui.write(senha)
-    pyautogui.click(*COORDS["botao_login"])
+    pyautogui.press("tab")
+    pyautogui.press("enter")
     time.sleep(3)
 
+# Função para carregar a tabela de produtos
 def carregar_tabela(caminho_csv):
     return pd.read_csv(caminho_csv)
 
+# Função para cadastrar produtos
 def cadastrar_produtos(tabela):
     for linha in tabela.index:
         pyautogui.click(*COORDS["campo_codigo"])
@@ -60,6 +79,8 @@ def cadastrar_produtos(tabela):
         pyautogui.press("enter")
         pyautogui.scroll(5000)
 
+
+# Função principal
 def main():
     abrir_navegador()
     fazer_login(EMAIL, SENHA)
