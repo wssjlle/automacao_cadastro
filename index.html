@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Automação de Cadastro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      line-height: 1.6;
+      padding: 30px 20px;
+    }
+    header {
+      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease-out;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    section {
+      margin-bottom: 40px;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    h2 {
+      color: #3b82f6;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    ul, ol {
+      padding-left: 20px;
+    }
+    code {
+      background-color: #1e293b;
+      color: #7dd3fc;
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+    pre {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #93c5fd;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #2563eb;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Automação de Cadastro de Produtos</h1>
+    <p>Economize tempo automatizando o cadastro em sistemas web com Python + PyAutoGUI</p>
+  </header>
+
+  <section>
+    <h2>✨ Funcionalidades</h2>
+    <ul>
+      <li>💻 Abre o navegador automaticamente</li>
+      <li>🔐 Realiza login com credenciais</li>
+      <li>📂 Lê planilhas <code>.csv</code> com os produtos</li>
+      <li>⚙️ Preenche e envia os dados automaticamente no sistema</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📌 Como usar</h2>
+    <ol>
+      <li>Instale as dependências:
+        <pre><code>pip install -r requirements.txt</code></pre>
+      </li>
+      <li>Adicione o arquivo <code>produtos.csv</code> na pasta <code>data/</code>.</li>
+      <li>Execute o script:
+        <pre><code>python automacao_cadastro/main.py</code></pre>
+      </li>
+    </ol>
+    <p><strong>Nota:</strong> Ajuste as coordenadas no código para seu monitor.</p>
+  </section>
+
+  <section>
+    <h2>📁 Código Fonte</h2>
+    <p>Veja o repositório completo e contribua com o projeto no GitHub:</p>
+    <a href="https://github.com/wssjlle/automacao_cadastro" class="btn" target="_blank">🔗 Acessar Repositório</a>
+  </section>
+
+  <footer>
+    Desenvolvido por <strong>wssjlle</strong> • Projeto MIT © 2025
+  </footer>
+</body>
+</html>
