@@ -3,4 +3,4 @@ __pycache__/
 *.log
 .env
 .venv/
-#data/produtos.csv
+data/produtos.csv
